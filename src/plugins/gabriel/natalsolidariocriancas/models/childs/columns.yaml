@@ -1,0 +1,10 @@
+columns:
+    name:
+        label: name
+        type: text
+    birthdate:
+        label: birthdate
+        type: text
+    turma:
+        label: turma
+        type: text

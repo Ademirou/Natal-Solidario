@@ -1,0 +1,176 @@
+tabs:
+    fields:
+        button_1_active:
+            label: 'dizoo.slider::lang.strings.button_active'
+            span: auto
+            type: switch
+            tab: 'dizoo.slider::lang.strings.button_1'
+        button_1_color:
+            label: 'dizoo.slider::lang.strings.button_color'
+            allowEmpty: true
+            allowCustom: true
+            span: left
+            trigger:
+                action: show
+                field: button_1_active
+                condition: checked
+            type: colorpicker
+            tab: 'dizoo.slider::lang.strings.button_1'
+        button_1_text:
+            label: 'dizoo.slider::lang.strings.button_text'
+            span: right
+            trigger:
+                action: show
+                field: button_1_active
+                condition: checked
+            attributes:
+                maxlength: '15'
+            type: text
+            tab: 'dizoo.slider::lang.strings.button_1'
+        button_1_url:
+            label: 'dizoo.slider::lang.strings.button_url'
+            span: left
+            trigger:
+                action: show
+                field: button_1_active
+                condition: checked
+            type: text
+            tab: 'dizoo.slider::lang.strings.button_1'
+        button_2_active:
+            label: 'dizoo.slider::lang.strings.button_active'
+            span: left
+            type: switch
+            tab: 'dizoo.slider::lang.strings.button_2'
+        button_2_text:
+            label: 'dizoo.slider::lang.strings.button_text'
+            span: left
+            trigger:
+                action: show
+                field: button_2_active
+                condition: checked
+            type: text
+            tab: 'dizoo.slider::lang.strings.button_2'
+            attributes:
+                maxlength: '15'
+        button_2_url:
+            label: 'dizoo.slider::lang.strings.button_url'
+            span: left
+            trigger:
+                action: show
+                field: button_2_active
+                condition: checked
+            type: text
+            tab: 'dizoo.slider::lang.strings.button_2'
+fields:
+    secondary_image:
+        label: 'dizoo.slider::lang.strings.slide_image'
+        mode: image
+        useCaption: 0
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        cssClass: ''
+        required: 0
+        type: fileupload
+    width:
+        label: 'dizoo.slider::lang.strings.image_width'
+        span: right
+        default: 1920
+        cssClass: ''
+        required: 1
+        type: number
+    height:
+        label: 'dizoo.slider::lang.strings.image_height'
+        span: left
+        default: 900
+        cssClass: ''
+        required: 1
+        type: number
+    subtitle:
+        label: 'dizoo.slider::lang.strings.slide_subtitle'
+        span: right
+        cssClass: ''
+        attributes:
+            maxlength: '40'
+        type: text
+    subtitle_size:
+        label: 'dizoo.slider::lang.strings.slide_font_size'
+        span: left
+        default: 24
+        cssClass: ''
+        required: 1
+        min: 1
+        max: 100
+        step: 1
+        type: number
+    title:
+        label: 'dizoo.slider::lang.strings.slide_title'
+        span: right
+        cssClass: ''
+        required: 1
+        attributes: {  }
+        type: text
+    title_color:
+        label: 'dizoo.slider::lang.strings.slide_title_color'
+        availableColors:
+            - '#000000'
+            - '#FFFFFF'
+        allowEmpty: true
+        allowCustom: true
+        span: auto
+        cssClass: ''
+        type: colorpicker
+    subtitle_color:
+        label: 'dizoo.slider::lang.strings.slide_subtitle_color'
+        availableColors:
+            - '#000000'
+            - '#FFFFFF'
+        allowEmpty: true
+        allowCustom: true
+        span: auto
+        cssClass: ''
+        type: colorpicker
+    title_size:
+        label: 'dizoo.slider::lang.strings.slide_font_size'
+        span: left
+        default: 60
+        cssClass: ''
+        required: 1
+        min: 1
+        max: 100
+        step: 1
+        type: number
+    description:
+        label: 'dizoo.slider::lang.strings.slide_description'
+        size: small
+        span: full
+        cssClass: ''
+        attributes:
+            maxlength: '255'
+        type: textarea
+    text_align:
+        label: 'dizoo.slider::lang.strings.text_align'
+        options:
+            left: 'dizoo.slider::lang.strings.left'
+            center: 'dizoo.slider::lang.strings.center'
+        span: right
+        default: left
+        cssClass: ''
+        type: balloon-selector
+    description_color:
+        label: 'dizoo.slider::lang.strings.slide_description_color'
+        availableColors:
+            - '#000000'
+            - '#FFFFFF'
+        allowEmpty: true
+        allowCustom: true
+        span: right
+        cssClass: ''
+        type: colorpicker
+    active:
+        label: 'dizoo.slider::lang.strings.active'
+        span: right
+        default: 1
+        cssClass: ''
+        type: switch

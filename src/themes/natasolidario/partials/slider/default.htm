@@ -1,0 +1,64 @@
+{% if slides %}
+    {% if __SELF__.property('custom_code') %}
+        {{ topcode|raw }}
+        {{ slidecode|raw }}
+        {{ bottomcode|raw }}
+    {% else %}
+
+        <div class="swiper-container show-slider show-slider2 mainslider home" >
+            <div class="swiper-wrapper">
+                {% for slide in slides %}
+                    <div class="swiper-slide">
+                        <div class="slider-item background-slider-color">
+                            <div class="themes-container2">
+                                <div class="flat-wrap">
+                                    <div class="wrap-heading flat-slider flex ">
+{#                                        <img class="absolute mark-page8"#}
+{#                                             src="{{ slide.image.thumb(slide.width,slide.height,{'mode':'crop'}) }} " alt="">#}
+                                        <div class="content">
+                                            <h1 {% if slide.title_color %} style="color: {{slide.title_color}}"  {% endif %} class="heading montserrat-bold">{{ slide.title }}</h1>
+                                            {% if slide.subtitle %}
+                                                <p class="sub-heading">{{ slide.subtitle }}</p>
+                                            {% endif %}
+                                            {% if slide.description %}<p{% if slide.description_color %}
+                                                style="color: {{ slide.description_color }}"
+                                            {% endif %}
+                                            class="mb-30 h4">{{ slide.description }}</p>{% endif %}
+                                            <div class="flat-bt-slider flex style2">
+                                                {% if slide.button_1_active and slide.button_1_text and slide.button_1_url %}
+                                                    <a href="{{ slide.button_1_url }}"
+                                                       class="sc-button style-1 fl-button"><span>{{ slide.button_1_text }}
+                                                </span></a>
+                                                {% endif %}
+                                                {% if slide.button_2_active and slide.button_2_text and slide.button_2_url %}
+
+                                                    <a href="{{ slide.button_2_url }}"
+                                                       class="sc-button style-2 btn-5"><span>{{ slide.button_2_text }}
+                                                </span></a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+
+                                        {% if slide.secondary_image %}
+                                        <div class="img-slider">
+                                            <div class="box-img">
+                                                <div class="image ">
+                                                    <img class="animate-up"
+                                                         src="{{ slide.secondary_image.thumb(slide.width,slide.height,{'mode':'crop'}) }}"
+                                                         alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="btn-slide-next"><i class="far fa-long-arrow-right"></i></div>
+                <div class="btn-slide-prev"><i class="far fa-long-arrow-left"></i></div>
+            </div>
+        </div>
+    {% endif %}
+{% endif %}

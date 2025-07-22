@@ -1,0 +1,11 @@
+plugin:
+    name: 'gabriel.natalsolidariocriancas::lang.plugin.name'
+    description: 'gabriel.natalsolidariocriancas::lang.plugin.description'
+    author: Gabriel
+    icon: oc-icon-users
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Crianças
+        url: gabriel/natalsolidariocriancas/childscontroller
+        icon: icon-users

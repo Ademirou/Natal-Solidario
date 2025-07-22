@@ -1,0 +1,13 @@
+plugin:
+    name: 'gabriel.movies::lang.plugin.name'
+    description: 'gabriel.movies::lang.plugin.description'
+    author: Gabriel
+    icon: oc-icon-video-camera
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Movies
+        url: gabriel/movies/movies
+        icon: icon-video-camera
+        iconSvg: ''
+        permissions: {  }

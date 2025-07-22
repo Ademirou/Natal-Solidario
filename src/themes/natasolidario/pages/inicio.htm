@@ -1,0 +1,45 @@
+url = "/inicio"
+layout = "default"
+title = "inicio"
+
+[slider]
+autoplay = 1
+loop = 1
+bootstrap = 1
+scripting = 1
+css = 1
+
+[contenteditor]
+
+[childs]
+
+[childsInfo]
+
+[childsLetter]
+==
+<!-- slider -->
+<section   class="flat-title-page style2 slider style-home2 style-home3">
+
+    {% component 'slider' %}
+
+</section>
+{% component 'childs' %}
+
+{% component 'childsLetter' %}
+
+<div class="tf-section flat-about background-about-color" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-5">
+                <div class="wrap-img">
+                    <div class="media">
+                        <img class="" src="{{ 'about.png' | media}}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-7">
+{% component 'contenteditor' file="about.htm" %}
+            </div>
+        </div>
+    </div>
+</div>

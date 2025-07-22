@@ -1,0 +1,10 @@
+name: ChildsController
+form: $/gabriel/natalsolidariocriancas/models/childs/fields.yaml
+modelClass: Gabriel\NatalSolidarioCriancas\Models\Childs
+defaultRedirect: gabriel/natalsolidariocriancas/childscontroller
+create:
+    redirect: 'gabriel/natalsolidariocriancas/childscontroller/update/:id'
+    redirectClose: gabriel/natalsolidariocriancas/childscontroller
+update:
+    redirect: gabriel/natalsolidariocriancas/childscontroller
+    redirectClose: gabriel/natalsolidariocriancas/childscontroller

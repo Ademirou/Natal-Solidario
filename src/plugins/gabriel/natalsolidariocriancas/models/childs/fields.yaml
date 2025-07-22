@@ -1,0 +1,37 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    image:
+        label: 'Imagem da Criança'
+        mode: image
+        useCaption: 0
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        cssClass: ''
+        required: 0
+        type: fileupload
+    birthdate:
+        label: 'Data de nascimento'
+        mode: datetime
+        span: auto
+        type: datepicker
+    turma:
+        label: Turma
+        span: auto
+        type: text
+    shirt_size:
+        label: 'Tamanho da camisa'
+        span: auto
+        type: text
+    pants_size:
+        label: 'Tamanho da calça'
+        span: auto
+        type: text
+    footwear_size:
+        label: 'Tamanho do Calçado'
+        span: auto
+        type: number

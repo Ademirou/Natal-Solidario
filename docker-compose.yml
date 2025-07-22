@@ -1,4 +1,29 @@
 services:
+  webapp:
+    build:
+      dockerfile: Dockerfile
+      context: ./infra/apache
+      args:
+        - UID=1000
+        - GID=1000
+        - USER=gabs
+    image: webapp_local
+    environment:
+      APACHE_RUN_USER: gabs
+      APACHE_RUN_GROUP: gabs
+      PHP_IDE_CONFIG: serverName=docker
+    hostname: localhost
+    ports:
+      - '8080:80'
+    volumes:
+      - './infra/apache/php.ini:/usr/local/etc/php/conf.d/php.ini'
+      - './src:/var/www/html'
+      - './infra/php/conf.d/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini'
+      - './infra/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini'
+    expose:
+      - 9000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   db:
     image: mysql/mysql-server:latest
     container_name: my-mysql

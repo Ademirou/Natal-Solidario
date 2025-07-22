@@ -1,0 +1,8 @@
+v1.0.1:
+    - 'Initialize plugin'
+v1.0.2:
+    - 'Created table gabriel_natalsolidariocriancas_criancas'
+    - builder_table_create_gabriel_natalsolidariocriancas_criancas.php
+v1.0.3:
+    - 'Created table gabriel_natalsolidariocriancas_letter'
+    - builder_table_create_gabriel_natalsolidariocriancas_letter.php

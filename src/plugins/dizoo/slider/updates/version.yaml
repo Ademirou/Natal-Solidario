@@ -1,0 +1,47 @@
+v1.0.1:
+    - 'Initialize plugin.'
+v1.0.2:
+    - 'Created table dizoo_slider_slides'
+    - builder_table_create_dizoo_slider_slides.php
+v1.0.3:
+    - 'Updated table dizoo_slider_slides'
+    - builder_table_update_dizoo_slider_slides.php
+v1.0.4:
+    - 'Updated table dizoo_slider_slides'
+    - builder_table_update_dizoo_slider_slides_2.php
+v1.0.5:
+    - 'Updated Owl carousel to the newest version and fixed single slide bug'
+v1.0.6:
+    - 'Added an option to align text for each slide'
+    - add_text_align.php
+v1.0.7:
+    - 'Added support for Rainlab Translate plugin'
+v1.0.8:
+    - 'Made the use of bootstrap optional to prevent overhead'
+v1.1.0:
+    - 'Added new feature for image align and the option to change font-size on the titles.'
+    - add_imagealign_and_fontsize.php
+v1.1.1:
+    - 'Bugfix for translate content.'
+v1.1.2:
+    - 'Aligning slide image now works as intended'
+v1.1.3:
+    - 'Bugfix to prevent error on uninstall'
+v1.1.4:
+    - 'Fixed error messages when uninstalling with SQLite'
+v1.1.5:
+    - 'Increase field length for text'
+    - increase_description_length.php
+v1.2.0:
+    - 'Fix for center aligning text and added the possibility to add colors to the text'
+    - add_text_color.php
+v1.2.1:
+    - 'Fix for colorpickers in model'
+v1.2.2:
+    - 'Add option to pick your own image dimensions and fixed a bug where the image would not be full width on larger resolutions.'
+    - add_dimensions.php
+v1.3.0:
+    - 'Add a custom HTML field in the settings where you can add your own slider HTMLcode when this option is enabled in the component settings.'
+v1.3.1:
+    - 'Updated table dizoo_slider_slides'
+    - builder_table_update_dizoo_slider_slides_3.php

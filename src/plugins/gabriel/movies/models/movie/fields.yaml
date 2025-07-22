@@ -1,0 +1,14 @@
+fields:
+    name:
+        label: 'movie title'
+        span: full
+        type: text
+    descricao:
+        label: Descrição
+        size: ''
+        span: full
+        type: richeditor
+    ano:
+        label: ano
+        span: auto
+        type: text

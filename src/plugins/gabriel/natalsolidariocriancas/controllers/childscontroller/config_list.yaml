@@ -1,0 +1,12 @@
+list: $/gabriel/natalsolidariocriancas/models/childs/columns.yaml
+modelClass: Gabriel\NatalSolidarioCriancas\Models\Childs
+title: ChildsController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'gabriel/natalsolidariocriancas/childscontroller/update/:id'

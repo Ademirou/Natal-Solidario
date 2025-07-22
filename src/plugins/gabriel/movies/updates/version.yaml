@@ -1,0 +1,8 @@
+v1.0.1:
+    - 'Initialize plugin'
+v1.0.2:
+    - 'Created table gabriel_movies_'
+    - builder_table_create_gabriel_movies_.php
+v1.0.3:
+    - 'Updated table gabriel_movies_'
+    - builder_table_update_gabriel_movies_.php

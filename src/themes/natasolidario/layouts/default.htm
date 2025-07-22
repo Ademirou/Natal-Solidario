@@ -1,0 +1,76 @@
+##
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>October CMS - {{ this.page.meta_title ?: placeholder('pageTitle') }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        {% styles %}
+        <link href="{{ 'assets/dist/bootstrap.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/dist/style.css'|theme }}" rel="stylesheet">
+
+        <link href="{{ 'assets/dist/responsive.css'|theme }}" rel="stylesheet">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    </head>
+    <body class="{{ 'page-'~this.page.id }} body header-fixed">
+
+
+    <div id="wrapper" class="wrapper-style">
+        <div id="page" class="clearfix">
+            {% partial 'commons/header' %}
+
+            {% page %}
+
+            {% partial 'commons/footer' %}
+        </div>
+    </div>
+
+    <div class="preload preload-container">
+        <div class="preload-logo"></div>
+    </div>
+
+    <div class="modal fade popup" id="popup_bid_success" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body space-y-20 pd-40">
+                    <h2 class="text-center">Your Bidding
+                        Successfuly Added</h2>
+                    <p class="text-center">your bid <span class="price color-popup">(2.39ETH) </span> has been listing
+                        to our database</p>
+                    <a href="#" class="btn btn-primary"> Watch the listings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a id="scroll-top"></a>
+
+        <script src="{{'assets/js/jquery.min.js' | theme }}"></script>
+        <script src="{{'assets/js/jquery.easing.js' | theme }}"></script>
+        <script src="{{'assets/js/bootstrap.min.js' | theme }}"></script>
+        <script src="{{'assets/js/swiper-bundle.min.js' | theme }}"></script>
+        <script src="{{'assets/js/swiper.js' | theme }}"></script>
+
+        <script src="{{'assets/js/plugin.js' | theme }}"></script>
+        <script src="{{'assets/js/count-down.js' | theme }}"></script>
+        <script src="{{'assets/js/shortcodes.js' | theme }}"></script>
+        <script src="{{'assets/js/main.js' | theme }}"></script>
+
+        <script src="{{'assets/js/wow.min.js' | theme }}"></script>
+        <script src="{{'assets/js/switchmode.js' | theme }}"></script>
+    {% framework %}
+    {% scripts %}
+    </body>
+</html>

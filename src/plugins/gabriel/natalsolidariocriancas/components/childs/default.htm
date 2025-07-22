@@ -1,0 +1,54 @@
+<div class="tf-section flat-auctions live-auctions home2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="heading-section2 style">
+                    <h2 class="fw-5 fonM">Crianças</h2>
+                </div>
+            </div>
+            <div class="col-lg-12 ">
+                <div class="swiper-container carousel-4 auctions show-slider3">
+                    <div class="swiper-wrapper">
+                        {% for child in children %}
+                            <div class="swiper-slide">
+                                <div class="slider-item">
+                                    <div class="sc-card-product sc-card-article blog-article">
+                                        <div class="card-media flat-img">
+                                            <a href="live-auctions-details.html"><img src="{{ child.image.path }}" alt="Image"></a>
+                                        </div>
+                                        <div class="content">
+
+                                            {% set data_nascimento = child.birthdate %}
+                                            {% set hoje = "now"| date("Y-m-d") %}
+                                            {% set idade = date(hoje).diff(date(data_nascimento)).y %}
+
+                                            <h6 class="tags">{{ idade }} Anos</h6>
+                                            <h3><a href="live-auctions-details.html">{{ child.name }}</a></h3>
+                                            <div class="meta-info mb-17 style">
+                                                <div class="author">
+                                                    <div class="info">
+                                                        <h5>Tamanho do Calçado: {{ child.footwear_size }}</h5>
+                                                        <h5>Tamanho da Camisa: {{ child.shirt_size }}</h5>
+                                                        <h5>Tamanho do Calça:{{ child.pants_size }}</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="meta-price flex-one">
+                                                <div class="button-place-bid w-100 text-center">
+                                                    <a href="#" data-toggle="modal" data-target="#popup_bid"
+                                                       class="sc-button btn-3 w-100 load-item" data-id="{{ child.id }}"><span>Adotar</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-button-next btn-slide-next active"></div>
+                    <div class="swiper-button-prev btn-slide-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

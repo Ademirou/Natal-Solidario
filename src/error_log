@@ -1,0 +1,5 @@
+[22-Jul-2025 15:39:56 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 746093740 bytes) in /var/www/html/vendor/october/rain/src/Resize/Resizer.php on line 524
+[22-Jul-2025 15:39:56 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 746093740 bytes) in /var/www/html/vendor/october/rain/src/Resize/Resizer.php on line 524
+[22-Jul-2025 15:39:56 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 746093740 bytes) in /var/www/html/vendor/october/rain/src/Resize/Resizer.php on line 524
+[22-Jul-2025 15:40:16 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 746093740 bytes) in /var/www/html/vendor/october/rain/src/Resize/Resizer.php on line 524
+[22-Jul-2025 15:40:24 UTC] PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 746093740 bytes) in /var/www/html/vendor/october/rain/src/Resize/Resizer.php on line 524
