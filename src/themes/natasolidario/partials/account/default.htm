@@ -1,0 +1,76 @@
+<div class="tf-section flat-explore flat-edit-profile flat-auctions-details ">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-4">
+                <div class="author-profile">
+                    <div class="feature-profile center">
+                        <div class="wrap-img flex j-content">
+                            <div class="img-box relative">
+                                <img class="avatar" id="profileimg" src="assets/images/box-item/edit-profile.jpg" alt="">
+                                <img class="check absolute" src="assets/images/icon/icon-check.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div id="upload-profile">
+                            <a href="#" class="btn-upload">
+                                Upload Your Photo </a>
+                            <input id="tf-upload-img" type="file" name="profile" required="">
+                            <a href="#" class="btn-upload btn-delete" id="tf-remove-img">
+                                Delete </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-8">
+                    <h3 class="title-two fw-6">Atualizar informações</h3>
+                    <form   method="post"  data-request="onUpdateProfile"
+                              data-request-flash class="form-profile">
+                        <div class="form-infor-profile">
+                            <div class="form-infor ">
+                                <div class="info-account">
+                                    <fieldset>
+                                        <p class="title-infor-account">Primeiro nome</p>
+                                        <input   name="first_name"
+                                                 type="text"
+                                                 value="{{ user.first_name }}"
+                                                 class="form-control w-100"
+                                                 placeholder="Primeiro nome"/>
+                                    </fieldset>
+                                    <fieldset>
+                                        <p class="title-infor-account">Segundo nome</p>
+                                        <input  name="last_name"
+                                                type="text"
+                                                value="{{ user.last_name }}"
+                                                class="form-control"
+                                                placeholder="Segundo nome"/>
+                                    </fieldset>
+                                    <fieldset>
+                                        <p class="title-infor-account">Gmail</p>
+                                        <input type="email"
+                                               value="{{ user.email }}"
+                                               class="form-control"
+                                               placeholder="info@gmail.com"
+                                               required>
+                                    </fieldset>
+
+                                </div>
+                            </div>
+                            <fieldset class="message">
+                                <p class="title-infor-account">Bio</p>
+                                <textarea tabindex="4" rows="3" name="notes" required> {{ user.notes }}</textarea>
+                            </fieldset>
+                        </div>
+                       <div class="mt-4 row gap-4 p-4 " style="gap:4px">
+                        <button class="tf-button-submit mg-t-15 w-100 col-md-12" type="submit">
+                            Salvar e confirmar alterações
+                        </button>
+                           <a href="{{ 'mudar-senha' | page }}" class="sc-button text-center text-white fs-16 mg-t-15 w-100 col-md-12 abtn" >
+                               Mudar senha
+                           </a>
+                       </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+ {{ user.child }}

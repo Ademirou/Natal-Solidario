@@ -1,0 +1,11 @@
+plugin:
+    name: 'gabriel.natalsolidarioagendamento::lang.plugin.name'
+    description: 'gabriel.natalsolidarioagendamento::lang.plugin.description'
+    author: Gabriel
+    icon: oc-icon-send
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Agendamentos
+        url: gabriel/natalsolidarioagendamento/agendamentoscontroller
+        icon: icon-calendar

@@ -1,0 +1,46 @@
+<div class="tf-section flat-auctions-details p-0">
+    <div class="container content">
+        <div class="row">
+
+            <div class=" col-md-6">
+                <div id="agendamentoWrapper" class=" mt-4">
+                    {% if agendamento %}
+                        <P class="alert alert-success">
+                            Entrega agendada para : <strong>{{ agendamento.scheduled_date | date('d/m/Y') }} </strong>
+                        </P>
+
+                    {% else %}
+                        <div class="w-100">
+                            <form data-request="onAgendar" data-request-flash class="p-4 m-4 ">
+                                <div>
+                                    <label class="fs-16 w-100">Agendar entrega de presente:</label>
+                                </div>
+                                <input type="hidden" name="child_id" value="{{ user.child.id }}"/>
+                                <input type="date" name="scheduled_date" required class="mt-4 w-100"/>
+                                <div>
+                                    <button type="submit" class="mt-4 w-100 h-50">Agendar Entrega</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{# <div id="agendamentoWrapper"> #}
+{#    {% if agendamento %} #}
+{#        <p class="alert alert-success"> #}
+{#            Entrega agendada para o dia <strong>{{ agendamento.scheduled_date|date('d/m/Y') }}</strong>. #}
+{#        </p> #}
+{#    {% else %} #}
+{#        <form data-request="onAgendar" data-request-flash> #}
+{#            <input type="hidden" name="child_id" value="{{ user.child.id }}" /> #}
+{#            <label>Escolha a data da entrega:</label> #}
+{#            <input type="date" name="scheduled_date" required /> #}
+{#            <button type="submit">Agendar entrega</button> #}
+{#        </form> #}
+{#    {% endif %} #}
+{# </div> #}

@@ -1,0 +1,9 @@
+
+{% if not user.child %}
+<div>
+    <button type="button" class="sc-button btn-3 w-100" data-request="onAdoptChild" data-request-data="{'child_id':{{childInfo.id }}}">
+    <a><span>Adotar</span></a>
+    </button>
+</div>
+
+{% endif %}

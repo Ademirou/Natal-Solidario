@@ -1,0 +1,18 @@
+title = "Minha criança"
+layout = "default"
+url = "/minha-crianca"
+
+[session]
+security = "user"
+checkToken = 0
+
+[agendamento]
+==
+
+{% partial 'commons/title'  title = this.page.title %}
+<div>
+{% partial 'childsletter/child_info' childInfo=user.child %}
+</div>
+
+{% component 'agendamento' %}
+

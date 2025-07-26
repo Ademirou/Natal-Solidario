@@ -2,6 +2,7 @@
 
 namespace Gabriel\NatalSolidarioCriancas\Models;
 
+use Database\Tester\Models\User;
 use Model;
 
 /**
@@ -20,6 +21,14 @@ class Childs extends Model
 
     public $attachOne = [
         'image' => 'System\Models\File',
+    ];
+
+    public $hasMany = [
+        'letters' => [ChildsLetter::class],
+    ];
+
+    public $belongsTo = [
+        'user' => User::class,
     ];
 
     /**

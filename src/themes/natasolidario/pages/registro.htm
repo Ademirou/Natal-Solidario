@@ -1,0 +1,14 @@
+title = "registro"
+layout = "default"
+url = "/registro"
+
+[session]
+security = "guest"
+redirect = "inicio"
+checkToken = 0
+
+[registration]
+==
+{% partial 'commons/title'  title = this.page.title %}
+
+{% component 'registration' %}

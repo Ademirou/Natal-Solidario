@@ -3,10 +3,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div id="site-header-inner">
-                    <div class="wrap-box flex">
+                    <div class="wrap-box flex ">
                         <div id="site-logo" class="clearfix">
                             <div id="site-logo-inner">
-                                <a href="/" rel="home" class="main-logo">
+                                <a href="/" rel="home" class="main-logo ">
                                     <img id="logo_header" src="{{'logoN-min.png' | media }}" alt="nft-gaming" width="130" height="130"
                                          data-retina="{{'assets/images/logo/logo_dark@2x.png' | theme}}" data-width="133"
                                          data-height="56">
@@ -14,37 +14,47 @@
                             </div>
                         </div>
                         <div class="mobile-button"><span></span></div><!-- /.mobile-button -->
-                        <nav id="main-nav" class="main-nav ">
-                            <ul id="menu-primary-menu" class="menu">
-                                <li>
-                                    <a href="#">Inicio</a>
+                            <nav id="main-nav" class="main-nav ">
+                                <ul id="menu-primary-menu" class="menu">
+                                    <li>
+                                        <a href="{{ 'inicio' | page }}">Inicio</a>
 
-                                </li>
+                                    </li>
+                                    {% if user %}
+                                    <li>
+                                        <a href="{{ 'adote-sua-crianca' | page }}">Adote sua criança</a>
+                                    </li>
+                                    {% endif %}
+                                    <li class="menu-item">
+                                        <a href="{{ '' }}">contato</a>
+                                    </li>
+                                    {% if user %}
+                                    <li class="menu-item">
+                                        <a href="{{ 'minha-crianca' | page}}">Minha Criança</a>
+                                    </li>
+                                    {% endif %}
+                                    {% if user %}
+                                    <li class="menu-item">
+                                        <a href="{{ 'conta' | page }}">Conta</a>
+                                    </li>
+                                    {% endif %}
+                                    {% if user %}
                                 <li>
-                                    <a href="#">Adote sua criança</a>
+                                    <a data-request="onLogout"  style='cursor: pointer' class="menu-item" data-request-data="{ redirect: '/' }">Desconectar</a>
                                 </li>
+                                    {% endif %}
+                                    {% if not user %}
+                                    <li>
+                                        <a href="{{ 'login' | page }}" style='cursor: pointer' class="menu-item"><span>Login</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ 'registro' | page }}" style='cursor: pointer' class="menu-item"><span>Cadastrar-sé</span></a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                                </nav><!-- /#main-nav -->
 
-                                <li class="menu-item menu-item-has-children">
-                                    <a href="#">informações</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item"><a href="#">Sobre</a></li>
-                                        <li class="menu-item"><a href="#">perfil </a></li>
-                                        <li class="menu-item"> <a href="#">Equipe</a> </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#">Minha Criança</a>
-                                </li>
-                            </ul>
-                        </nav><!-- /#main-nav -->
-                        <div class="flat-search-btn flex gap-button-menu">
-                            <div class="sc-btn-top" id="site-header">
-                                <a href="connect-wallet.html" class="sc-button header-slider style wallet fl-button pri-1"><span>Login</span></a>
-                            </div>
-                            <br>
-                            <div class="sc-btn-top" id="site-header">
-                                <a href="connect-wallet.html" class="sc-button header-slider style wallet fl-button pri-1"><span>Cadastrar-sé</span></a>
-                            </div>
+
                         </div>
 
                     </div>

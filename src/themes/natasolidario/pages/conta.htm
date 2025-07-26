@@ -1,0 +1,14 @@
+title = "conta"
+layout = "default"
+url = "/conta"
+
+[session]
+security = "user"
+redirect = "login"
+checkToken = 0
+
+[account]
+==
+{% partial 'commons/title'  title = this.page.title %}
+
+{% component 'account' %}

@@ -1,0 +1,12 @@
+columns:
+    age_letter:
+        label: age_letter
+        type: text
+    letter_descryption:
+        label: letter_descryption
+        type: text
+    child:
+        label: child_id
+        type: text
+        select: name
+        relation: childs

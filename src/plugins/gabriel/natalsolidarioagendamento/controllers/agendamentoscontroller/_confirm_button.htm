@@ -1,0 +1,9 @@
+<?php if (!$record->completed): ?>
+<form data-request="onConfirmarEntrega" data-request-confirm="Tem certeza que deseja confirmar a entrega?">
+    <input type="hidden" name="record_id" value="<?= $record->id ?>">
+    <button class="btn btn-sm btn-success">Confirmar Entrega</button>
+</form>
+<?php else: ?>
+<span class="text-muted">Entregue</span>
+<?php endif; ?>
+

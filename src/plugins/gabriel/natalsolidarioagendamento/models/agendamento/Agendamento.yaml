@@ -1,0 +1,6 @@
+fields:
+    schedule_data:
+        label: 'Seletor Data'
+        mode: datetime
+        span: auto
+        type: datepicker

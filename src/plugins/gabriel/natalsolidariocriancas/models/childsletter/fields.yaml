@@ -1,0 +1,16 @@
+fields:
+    age_letter:
+        label: 'Age letter'
+        span: auto
+        type: datepicker
+    childs:
+        label: Criança
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    letter_descryption:
+        label: 'Text area'
+        size: ''
+        span: full
+        type: textarea

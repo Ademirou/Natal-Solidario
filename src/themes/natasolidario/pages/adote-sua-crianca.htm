@@ -1,0 +1,23 @@
+url = "/adote-sua-crianca"
+layout = "default"
+title = "Adote sua criança"
+
+[childs]
+
+[childsLetter]
+[adoptchild]
+
+[session]
+security = "user"
+checkToken = 0
+
+[Adopt]
+==
+
+{% partial 'commons/title'  title = this.page.title %}
+
+{% component 'childs' %}
+
+{% component 'childsLetter' %}
+
+{% component 'adoptchild' %}

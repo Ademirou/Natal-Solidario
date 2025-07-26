@@ -1,0 +1,5 @@
+v1.0.1:
+    - 'Initialize plugin'
+v1.0.2:
+    - 'Created table gabriel_natalsolidarioagendamento_agendamento'
+    - builder_table_create_gabriel_natalsolidarioagendamento_agendamento.php

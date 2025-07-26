@@ -1,0 +1,6 @@
+plugin:
+    name: 'gabriel.minhacrianca::lang.plugin.name'
+    description: 'gabriel.minhacrianca::lang.plugin.description'
+    author: Gabriel
+    icon: oc-icon-gift
+    homepage: ''

@@ -4,41 +4,41 @@
         <div class="row">
             <div class="col-lg-6 col-md-12 ">
                 <div class="wrap-img">
+                    {% set data_nascimento = childInfo.birthdate %}
+                    {% set hoje = "now"| date("Y-m-d") %}
+                    {% set idade = date(hoje).diff(date(data_nascimento)).y %}
                     <div class="img-detail">
                         <div class="media">
-                            <img class="" src={{ childInfo.image.path }} alt="image">
+                            <img class="" src={{ childInfo.image.thumb(500,500,{'mode':'crop'})  }} alt="image">
                         </div>
-                        <h6 class="tags text-t">6 in stock</h6>
+                        <h6 class="tags text-t">{{ idade }} Anos</h6>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 ">
-                {% set data_nascimento = child.birthdate %}
-                {% set hoje = "now"| date("Y-m-d") %}
-                {% set idade = date(hoje).diff(date(data_nascimento)).y %}
+
                 <div class="post">
-                    <h2 class="fw-5 mt-2">Natal solidario</h2>
-                    <div class="meta-info mb-17">
-                        <div class="author">
-                            <div class="info">
-                                <h3>nome: <a class="text-color-3" href="author-profile.html">{{ childInfo.name }}</a> </h3>
-                                <div class="date" id="content">{{ childInfo.idade }}</div>
-                            </div>
-                        </div>
+                    <h2 class="fw-5 mt-2">{{ childInfo.name   }}</h2>
+                    <div class="meta-info mb-17 ">
                     </div>
-                    <p class="texts">Proin massa dui, maximus vitae massa in, ullamcorper euismod justo. Ut condimentum ipsum id nibh suscipit, eget iaculis mi mollis.
-                        Proin quis turpis odio. Suspendisse non ex a leo lobortis tincidunt condimentum quis sem. Sed ornare nunc vel mi eleifend, a posuere
-                        mauris efficitur. Duis sed velit est.</p>
-                    <div class="information flex">
+
+                    <div style="max-height: 300px; overflow: auto">
+                    {% for letter in childInfo.letters %}
+                        <h6 class="tags text-t">{{ letter.age_letter |  date('Y')}}</h6>
+                        <p class="texts"> {{ letter.letter_descryption }}</p>
+                    {% endfor %}
+                    </div>
+                    <div class="information flex mt-4">
                         <div class="column column-1">
-                            <h4 class="title-1 fw-5 text-color-3">tamanho camisa: <span class="">{{ childInfo.shirt_size }}</span></h4>
-                            <h4 class="fw-5 text-color-3">Tamanho da calça: <span class="">{{ childInfo.pants_size }}</span></h4>
+                            <h4 class="title-1 fw-5 footC ">tamanho camisa: <span class="">{{ childInfo.shirt_size }}</span></h4>
+                            <h4 class="fw-5 footC">Tamanho da calça: <span class="">{{ childInfo.pants_size }}</span></h4>
                         </div>
                         <div class="column column-2">
-                            <h4 class="title-1 fw-5 text-color-3">Tamanho calçado: <span class="">{{ childInfo.footwear_size }}</span></h4>
-                            <h4 class="fw-5 text-color-3">Turma: <span class="">{{ childInfo.turma }}</span></h4>
+                            <h4 class="title-1 fw-5 footC">Tamanho calçado: <span class="">{{ childInfo.footwear_size }}</span></h4>
+                            <h4 class="fw-5 footC">Turma: <span class="">{{ childInfo.turma }}</span></h4>
                         </div>
                     </div>
+                    {% component 'Adopt' %}
                 </div>
             </div>
         </div>

@@ -105,8 +105,8 @@
 .sc-button.btn-4:hover,
 .sc-button.btn-3:hover,
 .sc-button.btn-5 {
-  background-color: #8E2AC3;
-  border: 1px solid #8E2AC3;
+  background-color: #b58b04;
+  border: 1px solid #b58b04;
 }
 
 .sc-button.btn-2 {
@@ -125,7 +125,7 @@
 .is_dark .sc-button.btn-1:hover,
 .sc-button.fl-button:hover {
   border: 1px solid #fff;
-  background-color: #fff;
+  background-color: #775e0e;
 
 }
 
@@ -149,6 +149,8 @@
 .sc-button.fl-button.active span {
   color: var(--primary-color3);
   z-index: 40;
+    color: white;
+    background-color: rgba(255, 187, 0, 0);
 }
 
 .sc-button.btn-2 span {
@@ -203,9 +205,11 @@
 /* Page Title Inner
 -------------------------------------------------------------- */
 .flat-title-page.inner {
-  padding: 310px 0 222px;
+  padding: 110px 0 80px;
   position: relative;
   background: linear-gradient(79.57deg, rgba(19, 5, 24, 0.07) 10.75%, rgba(119, 89, 243, 0.07) 53.13%, rgba(19, 5, 24, 0.07) 106.55%);
+    text-align: center;
+
 }
 
 .is_dark .flat-title-page.slider, .is_dark .flat-title-page.inner {

@@ -682,9 +682,9 @@ input[type=reset]:hover,
 input[type=submit]:focus,
 input[type=submit]:hover {
     outline: 0;
-    background: #8E2AC3;
+    background: #70570d;
     color: #fff;
-    border: 1px solid #8E2AC3;
+    border: 1px solid #70570d;
 }
 
 /* Placeholder color */
@@ -1123,7 +1123,7 @@ a:hover, a:focus {
 }
 
 .text-color-3 {
-    color: #ffbb00;
+    color: #ffffff;
 }
 
 .text-color-4 {
@@ -1146,9 +1146,9 @@ a:hover, a:focus {
 -------------------------------------------------------------- */
 :root {
     /* color */
-    --primary-color: #020000;
+    --primary-color: #ffffff;
     --primary-color2: rgb(0, 0, 0);
-    --primary-color3: #ffb000;
+    --primary-color3: #ffbb00;
     --primary-color4: #706C83;
     --primary-color5: #13051808;
     --primary-color6: rgba(255, 185, 0, 0.58);
@@ -1161,7 +1161,7 @@ a:hover, a:focus {
 .is_dark {
     --primary-color: #ffffff;
     --primary-color2: #fff;
-    --primary-color3: #ffb000;
+    --primary-color3: #ffffff;
     --primary-color4: #636363;
     --primary-color5: #FFFFFF08;
     --primary-color6: #ffbb00;
@@ -2519,7 +2519,7 @@ header {
 
 .flat-blog .sc-card-article:hover,
 .live-auctions .sc-card-product:hover {
-    box-shadow: 0 0 16px 0 rgba(157, 26, 218, 0.5);
+    box-shadow: 0 0 16px 0 rgba(34, 25, 3, 0.89);
 }
 
 .sc-card-article:hover .img-item,
@@ -2589,3 +2589,21 @@ header {
     font-size: 80px;
 }
 
+.footC{
+    color: #ffbb00;
+}
+.btn-sigout{
+    color: white;
+}
+
+.abtn{
+    background-color: #ffbb00;
+    color: white;
+}.abtn:hover{
+    background-color: #70550e;
+    color: white;
+ }
+
+.nameCard{
+     color: #000000;
+ }

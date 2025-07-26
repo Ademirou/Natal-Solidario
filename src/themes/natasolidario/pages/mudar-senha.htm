@@ -1,0 +1,14 @@
+url = "/mudar-senha"
+layout = "default"
+title = "mudar-senha"
+
+[session]
+security = "user"
+redirect = "login"
+checkToken = 0
+
+[resetPassword]
+==
+{% partial 'commons/title'  title = this.page.title %}
+
+{% component 'resetPassword' %}

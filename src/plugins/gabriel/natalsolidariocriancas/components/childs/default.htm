@@ -34,10 +34,12 @@
                                                 </div>
                                             </div>
                                             <div class="meta-price flex-one">
+                                                {% if not user.child %}
                                                 <div class="button-place-bid w-100 text-center">
                                                     <a href="#" data-toggle="modal" data-target="#popup_bid"
                                                        class="sc-button btn-3 w-100 load-item" data-id="{{ child.id }}"><span>Adotar</span></a>
                                                 </div>
+                                                {% endif %}
                                             </div>
                                         </div>
                                     </div>

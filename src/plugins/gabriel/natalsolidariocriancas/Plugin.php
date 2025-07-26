@@ -1,7 +1,9 @@
 <?php namespace Gabriel\NatalSolidarioCriancas;
 
+use Gabriel\NatalSolidarioCriancas\components\Adopt;
 use Gabriel\NatalSolidarioCriancas\components\Childs;
 use Gabriel\NatalSolidarioCriancas\components\ChildsLetter;
+use RainLab\User\Models\User;
 use System\Classes\PluginBase;
 
 /**
@@ -21,6 +23,9 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+        User::extend(function ($model){
+            $model->hasOne['child'] = \Gabriel\NatalSolidarioCriancas\Models\Childs::class;
+        });
     }
 
     /**
@@ -32,6 +37,7 @@ class Plugin extends PluginBase
         return [
             Childs::class => 'childs',
             ChildsLetter::class => 'childsLetter',
+            Adopt::class => 'Adopt',
 
         ];
     }

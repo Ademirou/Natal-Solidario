@@ -1,0 +1,10 @@
+name: LetterController
+form: $/gabriel/natalsolidariocriancas/models/childsletter/fields.yaml
+modelClass: Gabriel\NatalSolidarioCriancas\Models\ChildsLetter
+defaultRedirect: gabriel/natalsolidariocriancas/lettercontroller
+create:
+    redirect: 'gabriel/natalsolidariocriancas/lettercontroller/update/:id'
+    redirectClose: gabriel/natalsolidariocriancas/lettercontroller
+update:
+    redirect: gabriel/natalsolidariocriancas/lettercontroller
+    redirectClose: gabriel/natalsolidariocriancas/lettercontroller

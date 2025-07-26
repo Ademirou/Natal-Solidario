@@ -9,3 +9,8 @@ navigation:
         label: Crianças
         url: gabriel/natalsolidariocriancas/childscontroller
         icon: icon-users
+        sideMenu:
+            side-menu-item:
+                label: Cartas
+                url: gabriel/natalsolidariocriancas/lettercontroller
+                icon: icon-file

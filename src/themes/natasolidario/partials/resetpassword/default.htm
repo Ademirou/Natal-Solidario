@@ -1,0 +1,88 @@
+{% if __SELF__.hasInvite %}
+    {% set redirectPage = 'account/index' %}
+    {% set passwordHandler = 'onConfirmPassword' %}
+
+    {# User has a valid token to reset their password #}
+{% elseif __SELF__.hasToken %}
+    {% set redirectPage = 'account/login' %}
+    {% set passwordHandler = 'onResetPassword' %}
+
+    {# User is changing their password normally #}
+{% else %}
+    {% set redirectPage = 'account/index' %}
+    {% set passwordHandler = 'onChangePassword' %}
+{% endif %}
+
+<form method="post" data-request="{{ passwordHandler }}" data-request-flash>
+        <input type="hidden" name="redirect" value="{{ redirectPage|page }}" />
+
+        <div class="text-center pb-3">
+            {% if __SELF__.hasInvite %}
+                <h1 class="h2 mb-3">Welcome!</h1>
+            {% elseif __SELF__.hasToken %}
+                <h1 class="h2 mb-3">Reset password</h1>
+            {% endif %}
+        </div>
+        <div class="tf-section flat-explore flat-edit-profile flat-auctions-details align-center"
+             xmlns="http://www.w3.org/1999/html">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-xl-9 col-lg-8">
+                        <h2 class="title-two fw-6 montserrat-bold">Mudar senha </h2>
+                        <form action="#" class="form-profile">
+                            <div class="form-infor-profile">
+                                <div class="form-infor flex flat-form">
+                                    <div class="info-account w-50  ">
+                                        <br>
+                                        {% if __SELF__.hasToken %}
+                                        <input type="hidden" name="token" value="{{ __SELF__.token }}" />
+                                        <input type="hidden" name="email" value="{{ __SELF__.email }}" />
+                                    {% else %}
+                                        <div class="form-floating my-3">
+                                            <p class="inputPassword">Senha atual </p>
+                                            <input
+                                                name="current_password"
+                                                type="password"
+                                                class="form-control"
+                                                id="inputCurrentPassword"
+                                                required
+                                            />
+                                        </div>
+                                    {% endif %}
+                                    <fieldset>
+                                        <p class="title-infor-account" for="inputPassword"> Nova senha </p>
+                                        <input name="password"
+                                               type="password"
+                                               class="form-control"
+                                               id="inputPassword"
+                                               autocomplete="new-password"
+                                               required
+                                        />
+                                    </fieldset>
+                                    <fieldset>
+                                        <p class="title-infor-account" for="inputPasswordConfirmation">Confirmar senha</p>
+                                        <input  name="password_confirmation"
+                                                type="password"
+                                                class="form-control"
+                                                id="inputPasswordConfirmation"
+                                                autocomplete="new-password"
+                                                required
+                                        />
+                                    </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        <br>
+                        <button class="tf-button-submit mg-t-15 w-50" type="submit">
+                            {% if __SELF__.hasInvite %}
+                                Set password
+                            {% else %}
+                                Redefinir senha
+                            {% endif  %}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

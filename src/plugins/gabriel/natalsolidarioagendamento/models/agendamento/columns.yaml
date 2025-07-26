@@ -1,0 +1,21 @@
+columns:
+    child:
+        label: child_id
+        type: number
+        select: name
+        relation: child
+    user:
+        label: user_id
+        type: number
+        select: first_name
+        relation: user
+    scheduled_date:
+        label: scheduled_date
+        type: date
+    completed:
+        label: completed
+        type: switch
+    _action:
+        label: ''
+        type: partial
+        path: ~/plugins/gabriel/natalsolidarioagendamento/controllers/agendamentoscontroller/_confirm_button.htm

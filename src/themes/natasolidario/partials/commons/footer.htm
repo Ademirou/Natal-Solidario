@@ -4,23 +4,16 @@
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="widget widget-logo">
                     <div class="flat-box">
-                        <div class="logo-footer" id="logo-footer">
-                            <a href="index.html">
-                                <img id="logo_footer" src="{{ 'images.png' | media }}" alt="nft-gaming" width="92" height="47"
+                        <div class="logo-footer mt-15" id="logo-footer">
+                            <a href="{{ 'inicio' | page }}">
+                                <img id="logo_footer" src="{{ 'logoN-min.png' | media }}" alt="Natal solidario" width="55%" height="55%"
                                      data-retina="assets/images/logo/logo_dark@2x.png" data-width="135"
                                      data-height="56">
                             </a>
                         </div>
-                        <p class="sub-widget-logo">Nulla et aliquam ligula. Praesent veluar rhoncus dui, nec aliquet leo.</p>
+                        <p class="sub-widget-logo">Faça parte dessa comunidade que foca em fazer feliz crianças que precisam</p>
                     </div>
-                    <div class="widget-social style-1 mg-t32">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
             <div class="col-lg-2 col-md-3 col-6 col-mobi">
@@ -29,35 +22,26 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-3 col-6">
-                <div class="widget widget-menu style-2">
-                    <h3 class="title-widget">Empresa</h3>
-                    <ul class="link-style-1">
-                        <li><a href="explore.html">informações</a></li>
-                        <li><a href="contact.html">Contato</a></li>
-                        <li><a href="blog.html">equipe</a></li>
-                        <li><a href="contact.html"></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-3 col-6">
                 <div class="widget widget-menu style-3">
-                    <h3 class="title-widget">Resources</h3>
+                    <h3 class="title-widget">Recursos </h3>
                     <ul class="link-style-1">
-                        <li><a href="live-auctions.html">Live Auctions</a></li>
-                        <li><a href="edit-profile.html">Edit Profile</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        {% if user %}
+                        <li><a href={{ '' }}>Adotar criança</a></li>
+                        <li><a href={{ '' }}>Minha criança</a></li>
+                        {% endif %}
+                        <li><a href={{ '' }}>contato</a></li>
                     </ul>
                 </div>
             </div>
+            {% if user %}
             <div class="col-lg-2 col-md-3 col-6">
                 <div class="widget widget-menu style-4">
-                    <h3 class="title-widget">My Account</h3>
+                    <h3 class="title-widget">Minha conta</h3>
                     <ul class="link-style-1">
-                        <li><a href="author.html">Author</a></li>
-                        <li><a href="popular-collections.html">Collection</a></li>
-                        <li><a href="author-profile.html">Author Profile</a></li>
-                        <li><a href="create-item.html">Create Item</a></li>
+                        <li><a href={{ 'conta' | page }}>Atualizar dados </a></li>
+                        <li><a href="{{ 'mudar-senha' | page }}">Mudar senha </a></li>
+                        <li><a href={{ 'registro' | page }}>Cadastrar-se </a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -70,16 +54,17 @@
             <div class="col-lg-7 col-md-12">
                 <div class="widget widget-menu bottom">
                     <ul class="flex link-style-1">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="connect-wallet.html">Connect & Wallet</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href={{ '' }}>Sobre</a></li>
+                        {% if user %}
+                        <li><a href={{ 'conta' | page }}>Conta</a></li>
+                        {% endif %}
+                        <li><a href={{ 'inicio' | page }}>Inicio</a></li>
+
                     </ul>
                 </div>
             </div>
             <div class="col-lg-5 col-md-12">
-                <div class="title-bottom font text-color-4">© 2022 NFT by <a href="https://themeforest.net/user/themesflat/portfolio" class="text-color-3">@ThemesFlat</a>. All rights reserved.</div>
+                <div class="title-bottom font text-color-4">© 2022 NFT by <a href="https://themeforest.net/user/themesflat/portfolio" class="text-color-3 footC ">@ThemesFlat</a>. All rights reserved.</div>
             </div>
         </div>
     </div>
