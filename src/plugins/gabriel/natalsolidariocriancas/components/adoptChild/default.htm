@@ -1,6 +1,6 @@
 
 
-<div class="tf-section flat-explore flat-auctions dark-style >
+<div class="tf-section flat-explore flat-auctions dark-style" >
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -14,7 +14,7 @@
                                             <div class="slider-item">
                                                 <div class="sc-card-product sc-card-article blog-article">
                                                     <div class="card-media flat-img">
-                                                        <a href="live-auctions-details.html"><img src="{{ child.image.path }}" alt="Image"></a>
+                                                        <a><img src="{{ child.image.path }}" alt="Image"></a>
                                                     </div>
                                                     <div class="content">
 
@@ -23,7 +23,7 @@
                                                         {% set idade = date(hoje).diff(date(data_nascimento)).y %}
 
                                                         <h6 class="tags">{{ idade }} Anos</h6>
-                                                        <h3><a href="live-auctions-details.html">{{ child.name }}</a></h3>
+                                                        <h3><a>{{ child.name }}</a></h3>
                                                         <div class="meta-info mb-17 style">
                                                             <div class="author">
                                                                 <div class="info">
@@ -43,8 +43,10 @@
                                 <div class="swiper-button-next btn-slide-next active"></div>
                                 <div class="swiper-button-prev btn-slide-prev"></div>
                             </div>
-             </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-

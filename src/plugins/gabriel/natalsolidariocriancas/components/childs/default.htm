@@ -14,7 +14,7 @@
                                 <div class="slider-item">
                                     <div class="sc-card-product sc-card-article blog-article">
                                         <div class="card-media flat-img">
-                                            <a href="live-auctions-details.html"><img src="{{ child.image.path }}" alt="Image"></a>
+                                            <a><img src="{{ child.image.path }}" alt="Image"></a>
                                         </div>
                                         <div class="content">
 
@@ -23,7 +23,7 @@
                                             {% set idade = date(hoje).diff(date(data_nascimento)).y %}
 
                                             <h6 class="tags">{{ idade }} Anos</h6>
-                                            <h3><a href="live-auctions-details.html">{{ child.name }}</a></h3>
+                                            <h3><a>{{ child.name }}</a></h3>
                                             <div class="meta-info mb-17 style">
                                                 <div class="author">
                                                     <div class="info">
@@ -35,10 +35,22 @@
                                             </div>
                                             <div class="meta-price flex-one">
                                                 {% if not user.child %}
+
+                                                    {% if not child.user %}
                                                 <div class="button-place-bid w-100 text-center">
                                                     <a href="#" data-toggle="modal" data-target="#popup_bid"
-                                                       class="sc-button btn-3 w-100 load-item" data-id="{{ child.id }}"><span>Adotar</span></a>
+                                                       class="sc-button btn-3 w-100 load-item" data-id="{{child.id}}"><span>Adotar</span></a>
                                                 </div>
+
+                                                        {% else  %}
+                                                            <div class="text-center w-100">
+                                                        <p class="text-success">Ja adotado</p>
+                                                        </div>
+                                                            {% endif %}
+                                                    {% elseif user.child.id == child.id %}
+                                                        <div class="text-center w-100">
+                                                            <a href="{{ 'minha-crianca' | page }}" class="text-success">sua criança</a>
+                                                        </div>
                                                 {% endif %}
                                             </div>
                                         </div>

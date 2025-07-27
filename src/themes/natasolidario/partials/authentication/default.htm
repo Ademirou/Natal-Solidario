@@ -11,9 +11,8 @@
                         <img class="absolute mark-login3" src="assets/images/mark/mark-login-3.png" alt="">
                         <img class="absolute mark-login" src="assets/images/backgroup-secsion/bg-login.png" alt="">
                         <div class="heading-login">
-                            <h2 class="fw-5">Singup To NFTs</h2>
-                            <div class="flex"><p>Dont’t have an account yet? </p><a href="register.html"
-                                                                                    class="text-p text-color-3 fw-6">Register</a>
+                            <h2 class="fw-5">Faça login</h2>
+                            <div class="flex">
                             </div>
                         </div>
                         {% if __SELF__.showLoginForm %}
@@ -31,15 +30,15 @@
                                             {% else %}
                                                 <p class="title-infor-account">Email</p>
                                                 <input type="email" name="email" id="inputEmail"
-                                                       placeholder="info@gmail.com"
+                                                       placeholder="natal@gmail.com"
                                                        oninput="document.getElementById('inputRecoverEmail').value = this.value"
                                                        value aria-required="true" required>
                                             {% endif %}
                                         </fieldset>
                                         <fieldset class="style-pass">
-                                            <p class="title-infor-account">Password</p>
+                                            <p class="title-infor-account">Senha</p>
                                             <input type="password" name="password" id="inputPassword"
-                                                   placeholder="*********************************" value
+                                                   placeholder="*******" value
                                                    aria-required="true" required>
                                         </fieldset>
                                         {% if __SELF__.showRememberMe %}
@@ -48,12 +47,12 @@
                                                     <input name="remember"
                                                            type="checkbox" id="inputRemember" checked>
                                                     <span class="btn-checkbox flex-two"></span>
-                                                    <span class="text-p text-color-7">Remember Me</span>
+                                                    <span class="text-p text-color-7">lembra-me</span>
                                                 </label>
-                                                <a href="#" class="forgot-pass text-p">Forgot Password?</a>
+
                                             </div>
                                         {% endif %}
-                                        <button type="submit" class="submit button-login" data-attach-loading>Singup
+                                        <button type="submit" class="submit button-login" data-attach-loading>Logar
                                         </button>
                                         <div class="text-center">
                                             {% if __SELF__.canRegister %}
@@ -67,12 +66,12 @@
 
                                             {% if __SELF__.usePasswordRecovery %}
                                                 <p class="mt-1 mb-3 text-body-secondary">
-                                                    Lost password?
+                                                    esqueceu sua senha?
                                                     <a
                                                         href="javascript:;"
                                                         data-toggle="collapse"
                                                         data-target=".login-collapse">
-                                                        Recover password
+                                                        Recuperar senha
                                                     </a>
                                                 </p>
                                             {% endif %}
@@ -94,11 +93,12 @@
                                     <input type="hidden" name="redirect" value="true" />
 
                                     <div class="text-center pb-3">
-                                        <h1 class="h2 mb-3">Recover password</h1>
-                                        <h2 class="h5 fw-normal">Enter your email address</h2>
+                                        <h1 class="h2 mb-3">Redefinir senha </h1>
+                                        <h2 class="h5 fw-normal">Coloque seu email de usuario</h2>
                                     </div>
 
                                     <div class="form-floating my-3">
+                                        <h5 for="inputRecoverEmail">Endereço de email </h5>
                                         <input
                                             name="email"
                                             type="email"
@@ -106,7 +106,6 @@
                                             id="inputRecoverEmail"
                                             placeholder="name@example.com"
                                         />
-                                        <label for="inputRecoverEmail">Email address</label>
                                     </div>
 
                                     <button
@@ -119,12 +118,12 @@
 
                                 <div class="text-center">
                                     <p class="mt-5 mb-3 text-body-secondary">
-                                        Remembered your password?
+                                        Lembrou da sua senha ?
                                         <a
                                             href="javascript:;"
                                             data-toggle="collapse"
                                             data-target=".login-collapse">
-                                            Sign in again
+                                            Faça login
                                         </a>
                                     </p>
                                 </div>
@@ -137,7 +136,7 @@
                                     <input type="hidden" name="redirect" value="true" />
 
                                     <div class="text-center pb-2">
-                                        <h1 class="h2 mb-3">Enter the code found in your authenticator app</h1>
+                                        <h1 class="h2 mb-3">entre com a autentificaçao de dois factores do app</h1>
                                     </div>
 
                                     <div class="form-floating my-3">
@@ -148,7 +147,7 @@
                                             id="inputTwoFactorCode"
                                             placeholder="name@example.com"
                                         />
-                                        <label for="inputTwoFactorCode">Authentication code</label>
+                                        <label for="inputTwoFactorCode">Codigo de autentificação</label>
                                     </div>
 
                                     <button

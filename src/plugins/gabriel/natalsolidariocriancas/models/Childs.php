@@ -2,8 +2,9 @@
 
 namespace Gabriel\NatalSolidarioCriancas\Models;
 
-use Database\Tester\Models\User;
+
 use Model;
+use RainLab\User\Models\User;
 
 /**
  * Model

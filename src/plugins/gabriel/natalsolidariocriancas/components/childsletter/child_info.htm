@@ -9,7 +9,7 @@
                     {% set idade = date(hoje).diff(date(data_nascimento)).y %}
                     <div class="img-detail">
                         <div class="media">
-                            <img class="" src={{ childInfo.image.thumb(500,500,{'mode':'crop'})  }} alt="image">
+                            <img class="" src={{ childInfo.image.thumb(500,500,{'mode':'crop'})  }}>
                         </div>
                         <h6 class="tags text-t">{{ idade }} Anos</h6>
                     </div>
@@ -18,7 +18,7 @@
             <div class="col-lg-6 ">
 
                 <div class="post">
-                    <h2 class="fw-5 mt-2">{{ childInfo.name   }}</h2>
+                    <h2 class="fw-5 mt-2">{{ childInfo.name}}</h2>
                     <div class="meta-info mb-17 ">
                     </div>
 
@@ -30,7 +30,7 @@
                     </div>
                     <div class="information flex mt-4">
                         <div class="column column-1">
-                            <h4 class="title-1 fw-5 footC ">tamanho camisa: <span class="">{{ childInfo.shirt_size }}</span></h4>
+                            <h4 class="title-1 fw-5 footC">tamanho camisa: <span class="">{{ childInfo.shirt_size }}</span></h4>
                             <h4 class="fw-5 footC">Tamanho da calça: <span class="">{{ childInfo.pants_size }}</span></h4>
                         </div>
                         <div class="column column-2">
@@ -38,6 +38,7 @@
                             <h4 class="fw-5 footC">Turma: <span class="">{{ childInfo.turma }}</span></h4>
                         </div>
                     </div>
+                    {{ user }}
                     {% component 'Adopt' %}
                 </div>
             </div>

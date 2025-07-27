@@ -1,6 +1,7 @@
 <?php
 
 namespace Gabriel\NatalSolidarioCriancas\components;
+use Auth;
 use Gabriel\NatalSolidarioCriancas\Models\Childs;
 
 use Cms\Classes\ComponentBase;
@@ -22,10 +23,19 @@ class ChildsLetter extends ComponentBase
 
        return [
            '#contents' => $this->renderPartial('@child_info.htm',[
-               'childInfo'=> $child
+               'childInfo'=> $child,
+               'user' => Auth::getUser()
 
            ])
        ];
+    }
+    public function onRun()
+    {
+        $user = Auth::getUser();
+
+        if ($user){
+            $this->page['auser'] = $user;
+        }
     }
 
 

@@ -4,8 +4,7 @@ namespace Gabriel\NatalSolidarioCriancas\components;
 
 
 use Cms\Classes\ComponentBase;
-use http\Client\Curl\User;
-use October\Rain\Support\Facades\Auth;
+use Auth;
 use Redirect;
 
 class Adopt extends ComponentBase
@@ -20,21 +19,21 @@ class Adopt extends ComponentBase
 
     public function onAdoptChild()
     {
-    $user = auth::getUser();
+    $user = Auth::getUser();
     $child = request('child_id');
     $child = \Gabriel\NatalSolidarioCriancas\Models\Childs::find($child);
     $child->user_id = $user->id;
     $child->save();
-    \Flash::success($user->id.' '.$child->name.' adotado');
+    \Flash::success($user->id.' '.$child->name.'adotado');
     return Redirect::to('/minha-crianca');
     }
 
     public function onRun()
     {
-        $user = auth::getUser();
+        $user = Auth::getUser();
 
         if ($user){
-            $this->page ['user'] = $user;
+            $this->page['auser'] = $user;
         }
     }
 }
